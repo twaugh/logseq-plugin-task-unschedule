@@ -1,0 +1,33 @@
+{
+  "name": "logseq-plugin-task-unschedule",
+  "version": "1.0.0",
+  "description": "Automatically removes SCHEDULED property when to-do items are marked as complete",
+  "main": "dist/index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "logseq": {
+    "id": "logseq-plugin-task-unschedule",
+    "title": "Task Unschedule",
+    "icon": "icon.png",
+    "main": "dist/index.html"
+  },
+  "keywords": [
+    "logseq",
+    "plugin",
+    "todo",
+    "schedule",
+    "task-management"
+  ],
+  "author": "Tim Waugh",
+  "license": "MIT",
+  "devDependencies": {
+    "@logseq/libs": "^0.0.17",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {}
+} 
