@@ -35,37 +35,9 @@ jobs:
         cd release
         zip -r ../logseq-plugin-task-unschedule-${{ github.ref_name }}.zip .
 
-    - name: Create Release
-      uses: actions/create-release@v1
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ./logseq-plugin-task-unschedule-${{ github.ref_name }}.zip
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref_name }}
-        release_name: Release ${{ github.ref_name }}
-        body: |
-          ## Changes
-
-          - See commit history for detailed changes
-
-          ## Installation
-
-          1. Download the `logseq-plugin-task-unschedule-${{ github.ref_name }}.zip` file
-          2. Extract it to a folder
-          3. Open Logseq → Settings → Plugins → Load unpacked plugin
-          4. Select the extracted folder
-
-          ## Usage
-
-          The plugin automatically removes SCHEDULED properties when todos are marked as complete.
-        draft: false
-        prerelease: false
-
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./logseq-plugin-task-unschedule-${{ github.ref_name }}.zip
-        asset_name: logseq-plugin-task-unschedule-${{ github.ref_name }}.zip
-        asset_content_type: application/zip
