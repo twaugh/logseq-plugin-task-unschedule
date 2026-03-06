@@ -3,9 +3,12 @@ import '@logseq/libs'
 async function main() {
   console.log('Task Unschedule Plugin loaded')
 
-  // Function to check if block has SCHEDULED in content
+  // Function to check if block has a non-repeating SCHEDULED in content
   function hasScheduledInContent(content: string): boolean {
-    return /^SCHEDULED:\s*<[^>]+>/mi.test(content)
+    if (!/^SCHEDULED:\s*<[^>]+>/mi.test(content)) return false
+    // Skip repeating tasks (e.g. .+1w, ++1d, +1m)
+    if (/^SCHEDULED:\s*<[^>]*(?:\.\+|\+\+|\+)\d+[hdwmy][^>]*>/mi.test(content)) return false
+    return true
   }
 
   // Function to remove SCHEDULED line from block content
