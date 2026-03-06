@@ -142,6 +142,18 @@ The plugin works out-of-the-box with no configuration required. It automatically
 - **SCHEDULED property not removed**: Ensure the todo is properly marked as complete using supported formats
 - **Plugin not loading**: Try disabling and re-enabling the plugin in Settings → Plugins
 
+## Support
+
+This is a small utility built to reduce a bit of knowledge work friction in
+Logseq. If it saves you time and keeps your daily notes tidy, you can drop
+a tip below. There is absolutely no pressure, but every coffee is hugely
+appreciated!
+
+<a href="https://www.buymeacoffee.com/twaugh" target="_blank"><img
+ src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+ alt="Buy Me A Coffee"
+ style="height: 60px !important;width: 217px !important;" ></a>
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
