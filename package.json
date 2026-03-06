@@ -1,6 +1,6 @@
 {
   "name": "logseq-plugin-task-unschedule",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Automatically removes SCHEDULED property when to-do items are marked as complete",
   "main": "dist/index.html",
   "scripts": {
