@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run"
   },
   "logseq": {
     "id": "logseq-plugin-task-unschedule",
@@ -27,6 +28,7 @@
     "@logseq/libs": "^0.2.1",
     "@types/node": "^20.10.0",
     "typescript": "^5.0.0",
-    "vite": "^7.0.3"
+    "vite": "^7.0.3",
+    "vitest": "^4.0.18"
   }
 }
